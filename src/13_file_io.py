@@ -17,3 +17,21 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
+f = open('foo.txt', 'r')
+
+
+with open('foo.txt') as f:
+    read_words = f.read()
+    print(read_words)
+    f.close()
+
+
+
+# write file
+w = open('bar.txt', 'w')
+write_words = w.write('Hello World')
+more_words = w.write('\nHello')
+
+with open('bar.txt') as w:
+    print(w.read())
+    w.close()
